@@ -1,0 +1,44 @@
+class LL 
+{
+	//traverse 
+	public static void traverse(Node list){
+		
+		while(list!=null){
+			System.out.println(list.data);
+			list =list.next;
+		}System.out.println();
+	}
+	
+	//search 
+	public static boolean searchKey(Node list, int key){
+		if (list==null)
+		{
+			return false;
+		}
+			while(list!=null){
+				if(list.data==key){
+					return true;
+					
+				} list=list.next;
+	
+			} return false;
+	}
+	
+	//insert into begining
+	
+	
+	public static void main(String[] args) 
+	{
+		Node list=new Node(10);
+		list.next=new Node(20);
+		list.next.next=new Node(30);
+		traverse(list);
+		 System.out.println("-----------------------");
+		 
+		int key=20;
+		if(searchKey(list,key)) 
+			System.out.println("yes");
+		else
+			System.out.println("no");
+	}
+}
